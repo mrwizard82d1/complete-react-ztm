@@ -1,0 +1,9 @@
+- Goal: become complete React developer
+- Develop **complete** React application
+	- More similar to "real-life" applications
+- Differences with other courses
+	- Build a **big** project
+	- Taught by two instructions using React in production
+	- Teach principles important beyond application
+		- Advanced topics
+- Goal: be in top 10% of available courses

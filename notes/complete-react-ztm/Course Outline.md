@@ -1,0 +1,24 @@
+- React basics
+	- Why react
+	- Fundamental principles
+	- Pros and cons
+	- Begin building "large" application
+	- Basic "components"
+		- React Router
+		- Firebase
+		- Redux
+		- Payments (Stripe)
+- Advanced topics
+	- CSS-in-JS
+	- Redux-Saga
+	- Hooks
+	- Context API
+	- GraphQL
+	- New Typescript section
+	- Performance
+- Bonus sections
+	- Progressive Web App
+	- Testing
+		- Using `jest`
+- Not easy but fun
+- On-line community

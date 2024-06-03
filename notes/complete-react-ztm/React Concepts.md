@@ -1,0 +1,6 @@
+- Why React
+	- Declarative
+	- Component Architecture
+	- Unidirectional Data Flow
+	- UI Layer
+- What is an "advance React developer"

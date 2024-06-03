@@ -1,0 +1,29 @@
+- Came out in 2013
+- Before React
+	- Click on link
+	- Return complete page to user
+		- HTML
+		- CSS
+		- Javascript
+	- Problem: browser incompatibility
+	- Initial tool: `jquery`
+		- Unified API to access page components
+		- Handled complexity of many, many browsers
+		- Consequence: bigger applications
+	- Additional libraries
+		- `backbone.js` 
+		- Ajax
+		- Birth of SPAs
+		- Less focus on HTML
+		- More focus on Javascript
+		- "Single page"
+			- Javascript updates DOM
+		- `angularjs` available in 2010
+			- Supported MVC /  MVVM
+	- Problem: 
+		- One change => Many document changes
+		- How to manage one-to-many changes
+- In 2014, `angular` decided to re-write **entire** library
+	- Opportunity for developers to move to `react`
+- What made `react` so great?
+	- See next video
