@@ -1,0 +1,1 @@
+Since I was working on a Mac, I captured no notes during this presentation.
