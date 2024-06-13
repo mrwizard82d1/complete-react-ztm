@@ -7,4 +7,6 @@ The course refers to two resources:
 [[Environment setup for Mac]]
 [[Environment setup for Windows]]
 [[Create React App - npx]]
+[[Create React App - React Scripts 1]]
+
 
