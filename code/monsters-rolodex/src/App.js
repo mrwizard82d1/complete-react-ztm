@@ -23,8 +23,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <p>Hi, { this.state.name }!</p>
         <button onClick={ () => { 
-          // Does **not** call `this.setState()`; consequently, react knows **nothing** about the change.
-          this.state.name = 'Lawrence';
+          // Actually changes the state
+          this.setState({ name: 'Lawrence' });
           console.log(this.state) 
           }}>
             Change name
