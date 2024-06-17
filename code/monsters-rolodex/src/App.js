@@ -22,7 +22,13 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>Hi, { this.state.name }!</p>
-        <button>Change name</button>
+        <button onClick={ () => { 
+          // Does **not** call `this.setState()`; consequently, react knows **nothing** about the change.
+          this.state.name = 'Lawrence';
+          console.log(this.state) 
+          }}>
+            Change name
+         </button>
         </header>
       </div>
     );
