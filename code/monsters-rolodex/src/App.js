@@ -4,23 +4,25 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    // Use constructor to instantiate **local** state
+
+    // **Must** be called to initialize parent state
+    super();  // Instantiates `Component` class
+
+    // Initalize state with a JSON object
+    this.state = {
+      name: 'Larry'
+    }
+  }
   
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <p>Hi, { this.state.name }!</p>
+        <button>Change name</button>
         </header>
       </div>
     );
