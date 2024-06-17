@@ -8,6 +8,16 @@ The course refers to two resources:
 [[Environment setup for Windows]]
 [[Create React App - npx]]
 [[Create React App - React Scripts 1]]
+[[Create React App - React Scripts 2]]
+[[Create React App - Everything Else]]
+[[Don't Eject]]
+[[Quick Note - React 18 and Strict Mode]]
+[[Monsters Rolodex 1]]
+[[Monsters Rolodex 2]]
+[[Monsters Rolodex 3]]
+[[Monsters Rolodex 4]]
+[[Monsters Rolodex 5]]
+
 
 
 
