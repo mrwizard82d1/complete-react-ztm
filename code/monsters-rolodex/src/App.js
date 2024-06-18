@@ -12,7 +12,8 @@ class App extends Component {
 
     // Initalize state with a JSON object
     this.state = {
-      name: 'Larry'
+      name: 'Larry',
+      company: 'Improving'
     }
   }
   
@@ -21,7 +22,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>Hi, { this.state.name }!</p>
+          <p>Hi, { this.state.name }! I work at { this.state.company }.</p>
         <button onClick={ () => { 
           // Actually changes the state
           this.setState({ name: 'Lawrence' });

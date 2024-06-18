@@ -1,7 +1,7 @@
 [[Introduction]]
 [[React Key Concepts]]
 [[React Basics]]
-[[Capstone Project: Intro + Setup]]
+[[Capstone Project - Intro + Setup]]
 [[Routing + React-Router]]
 [[Authentication + Firebase]]
 [[React Context for State Management]]
