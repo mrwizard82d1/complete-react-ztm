@@ -26,9 +26,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <p>Hi, { this.state.name.firstName } { this.state.name.lastName }! I work at { this.state.company }.</p>
         <button onClick={ () => { 
-          // This call now "breaks" because it assumes that `name` in our object has a value of type string
-          // But our change has `name` referring to an **object**.:w
-          this.setState({ name: 'Lawrence' });
+          // This call now "breaks" because it assumes that `name` in our object has a value 
+          this.setState({ name: { firstName: 'Lawrence', lastName: 'Jones' } });
           console.log(this.state) 
           }}>
             Change name
