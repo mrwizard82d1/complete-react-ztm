@@ -25,13 +25,29 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>Hi, { this.state.name.firstName } { this.state.name.lastName }! I work at { this.state.company }.</p>
-        <button onClick={ () => { 
-          // This call now "breaks" because it assumes that `name` in our object has a value 
-          this.setState({ name: { firstName: 'Lawrence', lastName: 'Jones' } });
-          console.log(this.state) 
-          }}>
+          <button onClick={() => {
+            // The advantage of this overload is that `setState` takes two arguments
+            // - state - The **current** (old) state
+            // - props - The propes of this component
+            this.setState(
+              // The first arguments is an updater **function**
+              () => {
+                // The value returned by this function is merged into the object, 
+                // `state`, **asynchronously**.
+                return {
+                  name: { firstName: 'Lawrence', lastName: 'Jones' }
+                }
+              }, 
+              // The second argument is an **optional** callback guaranteed to run **after** the first argument 
+              // has been run.
+              () => { 
+                console.log(this.state)
+              }
+            );
+          }}
+          >
             Change name
-         </button>
+          </button>
         </header>
       </div>
     );
