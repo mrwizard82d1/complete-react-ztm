@@ -39,7 +39,7 @@ class App extends Component {
           this.state.monsters.map(monster => {
             // Using `monster.name` for key value works - but only because 
             // **we have no duplicate names**
-            return <h1 key={ monster.id }>{ monster.name }</h1>
+            return <div key={ monster.id }><h1>{ monster.name }</h1> </div>
           })
         }
       </div>

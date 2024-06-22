@@ -13,10 +13,16 @@ React will update items from a collection
 
 Purpose of key
 - React uses unique value to only perform **minimal** updates
-- Consequently, `key` property **not** stored on page
-	- But only, I believe, in the virtual DOM
 
 Where to add
 - At "highest" level of element
+- For example
+```js
+	<div key={monsters.id}>
+		<h1>{monsters.name}</h1>
+	</div>
+```
 
 React keeps track of key internally
+- Consequently, `key` property **not** stored on page
+	- But only, I believe, in the virtual DOM
