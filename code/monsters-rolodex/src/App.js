@@ -1,6 +1,5 @@
 import { Component } from 'react';  // The `Component` class provided by react
 
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -26,7 +25,9 @@ class App extends Component {
       <div className="App">
         {
           this.state.monsters.map(monster => {
-            return <h1>{ monster.name }</h1>
+            // Using `monster.name` for key value works - but only because 
+            // **we have no duplicate names**
+            return <h1 key={monster.name}>{ monster.name }</h1>
           })
         }
       </div>

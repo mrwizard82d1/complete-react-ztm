@@ -4,6 +4,4 @@
 [[States and Shallow Merge]]
 [[setState and Secondary Callback]]
 [[Mapping Arrays to Elements]]
-
-
-
+[[Keys for Mapping]]
