@@ -19,10 +19,10 @@ class App extends Component {
     // Mounting occures only the the first time a component is added to the DOM
 
     // Remember that `fetch` returns a `Promise` (that we will eventually get data)
-
-    fetch('https://jsonplaceholder.typicode.com/users').then((response) => 
-      console.log(response)
-    );
+    // Convert HTTP response to usable form that 
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then((response) => response.json())
+    .then((users) => console.log(users));
   }
   
   render() {
