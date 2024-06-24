@@ -5,3 +5,4 @@
 [[setState and Secondary Callback]]
 [[Mapping Arrays to Elements]]
 [[Keys for Mapping]]
+[[Single Page Applications (SPAs)]]
