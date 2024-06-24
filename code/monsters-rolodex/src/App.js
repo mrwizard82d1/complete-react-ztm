@@ -22,7 +22,9 @@ class App extends Component {
     // Convert HTTP response to usable form that 
     fetch('https://jsonplaceholder.typicode.com/users')
     .then((response) => response.json())
-    .then((users) => console.log(users));
+    .then((users) => this.setState(() => {
+      return Object.assign({monsters: this.state.monsters}, {monsters: users})
+    }));
   }
   
   render() {
