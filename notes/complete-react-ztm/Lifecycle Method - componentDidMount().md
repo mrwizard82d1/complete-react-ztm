@@ -24,3 +24,13 @@
 	- When a component is **first** added to the DOM
 		- Then we want to request the **data** needed by that component
 		- That is, we must make an API request
+
+- Key take-away
+	- When we have a component
+		- That needs data from an external system
+		- In order to correctly render itself
+	- Then put that code inside of the
+		- `componentDidMount()` method
+
+- We will cover other lifecycle methods in other videos
+

@@ -21,10 +21,16 @@ class App extends Component {
     // Remember that `fetch` returns a `Promise` (that we will eventually get data)
     // Convert HTTP response to usable form that 
     fetch('https://jsonplaceholder.typicode.com/users')
-    .then((response) => response.json())
-    .then((users) => this.setState(() => {
-      return Object.assign({monsters: this.state.monsters}, {monsters: users})
-    }));
+      .then((response) => response.json())
+      .then((users) => this.setState(() => {
+        // This implementation completely replaces `this.state`
+        return { monsters: users }
+      },
+      // This function is invoked completely **after** the `fetch` returns (and has executed all apprepriate `thin` fragments)
+      () => { 
+        console.log(this.state)
+      }
+    ));
   }
   
   render() {
