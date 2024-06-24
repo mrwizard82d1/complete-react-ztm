@@ -11,25 +11,18 @@ class App extends Component {
 
     // Initalize state with a JSON object
     this.state = {
-      monsters: [
-        { 
-          name: 'Linda',
-          id: 'fefc6e3b2bb34005a6f97023ee98ea31'
-         },
-        { 
-          name: 'Frank',
-          id: 'c99214203ac24620930232a1789a72c9'
-        },
-        { 
-          name: 'Jacky' ,
-          id: '3cf8972ef676483db8315c987f2054cc'
-        },
-        { 
-          name: 'Andrei',
-          id: '1d69619591fc4f0db0844e34e4a61bb'
-        }
-      ]
-    }
+      monsters: [],
+    };
+  }
+
+  componentDidMount() {
+    // Mounting occures only the the first time a component is added to the DOM
+
+    // Remember that `fetch` returns a `Promise` (that we will eventually get data)
+
+    fetch('https://jsonplaceholder.typicode.com/users').then((response) => 
+      console.log(response)
+    );
   }
   
   render() {
