@@ -5,11 +5,17 @@ const myPromise = new Promise((resolve, reject) => {
     // A `Promise` is so named because it will **eventually** have a value
 
     // Simulates an asynchronous call.
-    setTimeout(() => {
-        resolve('I have succeeded')
-    }, 1000 /* 1000 ms */ );
+    if (false) {
+        setTimeout(() => {
+            resolve('I have succeeded')
+        }, 1000 /* 1000 ms */ );
+    }
+    else {
+        reject('I have failed');
+    }
 });
 
-myPromise.then(value => console.log(value));
+myPromise.then(value => console.log(value))
+         .catch(rejectValue => console.log(rejectValue));
 
 export { myPromise };
