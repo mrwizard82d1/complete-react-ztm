@@ -1,0 +1,3 @@
+- An exciting feature
+	- Transforms async operations to **synchronous**
+	- 
