@@ -11,3 +11,20 @@ fetch('https://jsonplaceholder.typicode.com/users')
 })
 .then(response => response.json())
 .then(posts => console.log(posts));
+
+const myAsyncFunction = async() => {
+    const usersResponse = await fetch(
+        'https://jsonplaceholder.typicode.com/users'
+    );
+    const users = await usersResponse.json();
+
+    const secondUser = users[1];
+    console.log(secondUser);
+    const postResponse = await(
+        fetch('https://jsonplaceholder.typicode.com/posts?userId' + secondUser.id)
+    );
+    const posts = await postResponse.json();
+    console.log(posts);
+}
+
+myAsyncFunction();
