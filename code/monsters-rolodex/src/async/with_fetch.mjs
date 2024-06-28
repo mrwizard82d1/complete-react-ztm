@@ -22,7 +22,7 @@ const myAsyncFunction = async() => {
         const secondUser = users[1];
         console.log(secondUser);
         const postResponse = await(
-            fetch('https://jsonplaceholdr.typicode.com/posts?userId' + secondUser.id)
+            fetch('https://jsonplaceholder.typicode.com/posts?userId' + secondUser.id)
         );
         const posts = await postResponse.json();
         console.log(posts);
