@@ -1,3 +1,11 @@
 - An exciting feature
 	- Transforms async operations to **synchronous**
-	- 
+- By using the `async` keyword to declare a function
+	- We can now use `await` within the function
+- Allows us to write code that **looks like**
+	- Synchronous code
+	- But is actually **asynchronous**
+- H2 handle errors asynchronously
+	- In synchronous code, we use `catch`
+	- In asynchronous code, we use a `try-catch` block
+	- Note that it may take "some time" to actually log the error
