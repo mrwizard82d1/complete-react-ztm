@@ -9,6 +9,8 @@ class App extends Component {
     // **Must** be called to initialize parent state
     super();  // Instantiates `Component` class
 
+    console.log('Entering constructor');
+
     // Initalize state with a JSON object
     this.state = {
       monsters: [],
@@ -16,6 +18,8 @@ class App extends Component {
   }
 
   componentDidMount() {
+
+    console.log('Entering componentDidMount()');
     // Mounting occures only the the first time a component is added to the DOM
 
     // Remember that `fetch` returns a `Promise` (that we will eventually get data)
@@ -34,6 +38,7 @@ class App extends Component {
   }
   
   render() {
+    console.log('Entering render()');
     return (
       <div className="App">
         {
