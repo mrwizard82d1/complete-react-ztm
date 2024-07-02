@@ -8,3 +8,4 @@
 [[Single Page Applications (SPAs)]]
 [[Lifecycle Method - componentDidMount()]]
 [[Renders and Re-renders]]
+[[Input Search Box Component]]
