@@ -41,6 +41,7 @@ class App extends Component {
     console.log('Entering render()');
     return (
       <div className="App">
+        <input className='search-box' type='search' placeholder='search monsters'/>
         {
           this.state.monsters.map(monster => {
             // Using `monster.name` for key value works - but only because 
