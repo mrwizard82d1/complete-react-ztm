@@ -43,8 +43,10 @@ class App extends Component {
       <div className="App">
         <input className='search-box' type='search' placeholder='search monsters' onChange={(event) => {
           console.log(event.target.value);
+          const textToMatch = event.target.value.toLocaleLowerCase();
           const filteredMonsters = this.state.monsters.filter(monster => {
-            return monster.name.includes(event.target.value);
+            const nameToTest = monster.name.toLocaleLowerCase();
+            return nameToTest.includes(textToMatch);
           });
 
           this.setState(() => {
