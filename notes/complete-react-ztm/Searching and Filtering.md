@@ -1,0 +1,21 @@
+- We must filter down our `monsters` list to the **filtered** list of monsters
+	- Filter monsters by
+		- Invoking `Array.filter()`
+		- If function supplied to `filter`
+			- Returns `true`, keep item
+			- Returns `false`, do not include item in result
+- Simply calling `String.include()` generally works
+	- Problem with capitalization
+- General best practice
+	- **Use non-modifying functions**
+	- Specifically, treat **all** items in `this.state` as **immutable**
+- Issue
+	- Typing `lea` filters "Leanne" **out**
+	- `String.includes()` is **case-sensitive**
+- After fix,
+	- Program now works if one types
+		- "lea"
+		- And "Lea"
+- However, still have an issue:
+	- Once we filter the list, it is **permanently** filtered
+	- That is, we "lose" the original list of monsters
