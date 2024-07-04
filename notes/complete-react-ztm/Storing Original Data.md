@@ -1,0 +1,16 @@
+- Monsters, we have a problem
+	- Entering text in the search box
+	- **Changes** the list of monsters
+		- That is, the state of our application
+- We want to change our implementation
+	- We will need to
+		- **Not** change `this.state.monsters`
+	- Two options:
+		- Move filtering code outside of `return` **but still in `render()`**
+		- Move filtering code into new function
+- Easiest change: move filter code into `render` but
+	- **Outside** the JSX HTML code
+	- This change also requires 
+		- Adding `textToMatch` to `this.state`
+		- Change the code that renders the list to start with `filteredMonsters`,  a local variable 
+		- 
