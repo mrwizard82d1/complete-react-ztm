@@ -38,6 +38,19 @@ class App extends Component {
       ));
   }
 
+  onSearchChanged = (event) => {
+    // "Calculate" the current `textToMatch`
+    const textToMatch = event.target.value.toLocaleLowerCase();
+
+    // Save `textToMatch` in the state for use later
+    this.setState(() => {
+      // The expression `{ textToMatch }` translates to an object whose
+      // - Key is the name, `textToMatch` and whose
+      // - Value is the value of the variable, `textToMatch`
+      return {textToMatch};
+    });
+  };
+
   render() {
     console.log('Entering render()');
 
@@ -48,18 +61,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <input className='search-box' type='search' placeholder='search monsters' onChange={(event) => {
-          // "Calculate" the current `textToMatch`
-          const textToMatch = event.target.value.toLocaleLowerCase();
-
-          // Save `textToMatch` in the state for use later
-          this.setState(() => {
-            // The expression `{ textToMatch }` translates to an object whose
-            // - Key is the name, `textToMatch` and whose
-            // - Value is the value of the variable, `textToMatch`
-            return { textToMatch };
-          });
-        }}/>
+        <input className='search-box' type='search' placeholder='search monsters' onChange={this.onSearchChanged}/>
 
         {
           // Render the **local**, filtered list of monsters
