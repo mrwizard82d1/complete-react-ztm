@@ -53,15 +53,21 @@ class App extends Component {
 
   render() {
     console.log('Entering render()');
+    
+    const { monsters, textToMatch } = this.state;
+    const { onSearchChanged } = this;
 
-    const filteredMonsters = this.state.monsters.filter(monster => {
+    const filteredMonsters = monsters.filter(monster => {
       const nameToTest = monster.name.toLocaleLowerCase();
-      return nameToTest.includes(this.state.textToMatch);
+      return nameToTest.includes(textToMatch);
     });
 
     return (
       <div className="App">
-        <input className='search-box' type='search' placeholder='search monsters' onChange={this.onSearchChanged}/>
+        <input className='search-box'
+               type='search'
+               placeholder='search monsters'
+               onChange={ onSearchChanged }/>
 
         {
           // Render the **local**, filtered list of monsters

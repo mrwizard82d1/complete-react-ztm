@@ -1,0 +1,17 @@
+- The Javascript function responding to `onChange` 
+	- Is **anonymous**
+	- Consequently, it is **recreated** repeatedly
+	- As a result, every time through the `render()` method
+		- Recreates the function
+		- Slows down ever so slightly
+		- Remember than React calls `render` **every change of the application state**
+		- This behavior is **incorrect** because body of function **never changes**
+	- "Repair error" by moving code to specifically named function
+- We currently repeatedly reference members of `this`
+	- Because we are using ES6, we can actually use destructuring to avoid this repetition
+	- We can destructure both
+		- `this.state`
+		- `this` itself
+- Main benefits
+		- Destructuring makes code more readable
+		- Extract method improves run-time performance
