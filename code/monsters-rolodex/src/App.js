@@ -71,7 +71,9 @@ class App extends Component {
         {/*  })*/}
         {/*}*/}
         {/* Note that we are passing a string **not** an array */}
-        <CardList monsters={'I am the monsters'} />
+        {/* The following code demonstrates that one can pass **anything** */}
+        {/* to a component.*/}
+        <CardList monsters={'I am the monsters'} anything={['a', 'z']} />
       </div>
     );
   }
