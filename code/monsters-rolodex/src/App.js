@@ -61,19 +61,7 @@ class App extends Component {
                type='search'
                placeholder='search monsters'
                onChange={ onSearchChanged }/>
-
-        {/*{*/}
-        {/*  // Render the **local**, filtered list of monsters*/}
-        {/*  filteredMonsters.map(monster => {*/}
-        {/*    // Using `monster.name` for key value works - but only because*/}
-        {/*    // **we have no duplicate names***/}
-        {/*    return <div key={monster.id}><h1>{monster.name}</h1></div>*/}
-        {/*  })*/}
-        {/*}*/}
-        {/* Note that we are passing a string **not** an array */}
-        {/* The following code demonstrates that one can pass **anything** */}
-        {/* to a component.*/}
-        <CardList monsters={'I am the monsters'} anything={['a', 'z']} />
+        <CardList monsters={ filteredMonsters } />
       </div>
     );
   }
