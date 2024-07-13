@@ -12,3 +12,4 @@
 [[Searching and Filtering]]
 [[Storing Original Data]]
 [[Optimizations]]
+[[Understanding Components]]

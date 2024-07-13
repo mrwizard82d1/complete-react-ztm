@@ -1,0 +1,36 @@
+- Goals
+	- Understanding components conceptually
+	- Deep(er) dive
+- What is a component?
+	- `App` is a (class) component
+	- Governs a piece of the UI
+		- Entire applications currently lives in a single component
+- Remember, `react` ties together
+	- The appearance of the application
+		- That is, the UI
+	- The functionality of the application
+		- The "code-behind"
+- Our definition: a component
+	- Ties together the appearance and functionality of the UI
+		- The code itself
+	- Also aims to tie together portions of the code into a reusable chunk of code
+		- Currently, our application ties together
+			- A search bar
+			- The list of matching monsters
+	- We can **generalize** the two "components" of our UI
+- Goal of components
+	- Create "Lego blocks"
+		- Requires **single responsibility** for components
+- Current state of `App`
+	- Search bar and list are tied together
+	- Contains **all** our code
+- To create actual components, we must **generalize** our two features
+	- A search box
+	- A list of results
+- Begin by extracting our list of monsters into a general component
+- Components reflected in directory structure
+	- Many React applications create a `components` subdirectory of `src`
+	- Since we have identified two components, we create two subdirectories of `components`
+		- `card-list`
+		- `search-box`
+		- 
