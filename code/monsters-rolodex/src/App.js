@@ -11,8 +11,6 @@ class App extends Component {
     // **Must** be called to initialize parent state
     super();  // Instantiates `Component` class
 
-    console.log('Entering constructor');
-
     // Initialize state with a JSON object
     this.state = {
       monsters: [],
@@ -22,7 +20,6 @@ class App extends Component {
 
   componentDidMount() {
 
-    console.log('Entering componentDidMount()');
     // Mounting occurs only the the first time a component is added to the DOM
 
     // Remember that `fetch` returns a `Promise` (that we will eventually get data)
@@ -32,10 +29,6 @@ class App extends Component {
       .then((users) => this.setState(() => {
           // This implementation completely replaces `this.state`
           return {monsters: users}
-        },
-        // This function is invoked completely **after** the `fetch` returns (and has executed all apprepriate `thin` fragments)
-        () => {
-          console.log(this.state)
         }
       ));
   }
@@ -54,8 +47,6 @@ class App extends Component {
   };
 
   render() {
-    console.log('Entering render()');
-
     const { monsters, textToMatch } = this.state;
     const { onSearchChanged } = this;
 
@@ -79,7 +70,8 @@ class App extends Component {
         {/*    return <div key={monster.id}><h1>{monster.name}</h1></div>*/}
         {/*  })*/}
         {/*}*/}
-        <CardList />
+        {/* Note that we are passing a string **not** an array */}
+        <CardList monsters={'I am the monsters'} />
       </div>
     );
   }
