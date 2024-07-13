@@ -1,0 +1,17 @@
+- Goal
+	- Refactor the "card list section" of `App`
+	- Into a reusable React component
+- Naming
+	- Our choice `card-list.component.jsx`
+	- Other options
+		- `index.jsx` 
+		- `card-list.jsx`
+			- Possible problems
+				- Other files may exist in the folder
+- Components **must** return a single HTML element
+	- But may contain other HTML elements as children
+	- Rendered HTML **cannot** return **multiple**  sibling HTML elements
+		- Ways around this limitation
+		- But good rule of thumb
+- We will move our original, commented out code into our component
+	- Using `props`
