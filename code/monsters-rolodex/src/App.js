@@ -1,5 +1,7 @@
 import {Component} from 'react';  // The `Component` class provided by react
 
+import CardList from './components/card-list/card-list.component';
+
 import './App.css';
 
 class App extends Component {
@@ -24,7 +26,7 @@ class App extends Component {
     // Mounting occurs only the the first time a component is added to the DOM
 
     // Remember that `fetch` returns a `Promise` (that we will eventually get data)
-    // Convert HTTP response to usable form that 
+    // Convert HTTP response to usable form that
     fetch('https://jsonplaceholder.typicode.com/users')
       .then((response) => response.json())
       .then((users) => this.setState(() => {
@@ -53,7 +55,7 @@ class App extends Component {
 
   render() {
     console.log('Entering render()');
-    
+
     const { monsters, textToMatch } = this.state;
     const { onSearchChanged } = this;
 
@@ -69,14 +71,15 @@ class App extends Component {
                placeholder='search monsters'
                onChange={ onSearchChanged }/>
 
-        {
-          // Render the **local**, filtered list of monsters
-          filteredMonsters.map(monster => {
-            // Using `monster.name` for key value works - but only because 
-            // **we have no duplicate names**
-            return <div key={monster.id}><h1>{monster.name}</h1></div>
-          })
-        }
+        {/*{*/}
+        {/*  // Render the **local**, filtered list of monsters*/}
+        {/*  filteredMonsters.map(monster => {*/}
+        {/*    // Using `monster.name` for key value works - but only because*/}
+        {/*    // **we have no duplicate names***/}
+        {/*    return <div key={monster.id}><h1>{monster.name}</h1></div>*/}
+        {/*  })*/}
+        {/*}*/}
+        <CardList />
       </div>
     );
   }
