@@ -1,0 +1,27 @@
+- Goal: 
+	- Move actual monsters data into component
+- `Input` component **already** have "props"
+- Can name and pass whatever we want as a prop
+- Question
+	- Do we pass in 
+		- The filtered list or
+		- The original list?
+- Separate responsibilities
+	- The search box does filtering
+	- Consequently, `CardList` **only** displays
+		- Whatever it is given
+- To perform some "diagnostics", we print the text "render" at each call to `CardList.render()`
+	- Render prints **multiple times**
+		- Twice in video
+		- 3x in my experiments
+	- Why?
+		- First call to `render()`
+			- First time through code. `props` is empty array.
+		- Second call is "repeated"
+			- My hypothesis:
+				- The `App` state consists of 
+					- `monsters`
+					- `textToMatch`
+				- The first render occurs when `monsters` is initialized
+				- The second render occurs when the initial "empty filter" of the search box is processed
+				- But I'm not really certain

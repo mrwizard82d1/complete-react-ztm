@@ -14,3 +14,4 @@
 [[Optimizations]]
 [[Understanding Components]]
 [[CardList Component]]
+[[Component Props]]
