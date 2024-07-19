@@ -47,6 +47,8 @@ class App extends Component {
   };
 
   render() {
+    console.log('App.render() called');
+
     const { monsters, textToMatch } = this.state;
     const { onSearchChanged } = this;
 

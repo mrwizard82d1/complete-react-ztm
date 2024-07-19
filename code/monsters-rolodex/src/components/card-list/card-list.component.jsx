@@ -3,9 +3,10 @@ import {Component} from 'react';
 class CardList extends Component {
 
   render() {
-    const { monsters } = this.props;
+    console.log(this.props.monsters);
+    console.log('CardList.render() called');
 
-    console.log(`render ${ monsters.length }`);
+    const { monsters } = this.props;
 
     return (
       <div>
