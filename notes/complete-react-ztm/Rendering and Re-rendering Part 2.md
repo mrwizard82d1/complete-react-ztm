@@ -1,0 +1,12 @@
+- Looking at
+	- Rendering
+	- (Re-)Rendering
+	- With **two** components
+- Components are rendered when:
+	- When component mounted
+	- State changes (a call to `setState())
+	- **Props** change
+	- Primary rule used by react to determine when to render
+- `render()` methods called for
+	- Each component in tree below `App`
+	- Top-down rendering
