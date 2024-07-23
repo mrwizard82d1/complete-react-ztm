@@ -21,7 +21,7 @@ class App extends Component {
 
   componentDidMount() {
 
-    // Mounting occurs only the the first time a component is added to the DOM
+    // Mounting occurs only the first time a component is added to the DOM
 
     // Remember that `fetch` returns a `Promise` (that we will eventually get data)
     // Convert HTTP response to usable form that
@@ -60,7 +60,9 @@ class App extends Component {
 
     return (
       <div className="App">
-        <SearchBox onChangeHandler={onSearchChanged} />
+        <SearchBox
+          placeholder='search monsters'
+          onChangeHandler={onSearchChanged} />
         <CardList monsters={ filteredMonsters } />
       </div>
     );
