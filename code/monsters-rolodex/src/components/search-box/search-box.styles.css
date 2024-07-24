@@ -10,12 +10,3 @@
     line-height: 30px;
     margin-bottom: 30px;
 }
-
-/*
-Even though the `CardList` component is defined "elsewhere," because we define a style named `card-list` and because
-we set the style of the `CardList` component to `card-list`, the following style changes the background
-**of the rendered card list**
-*/
-.card-list {
-    background-color: red;
-}
