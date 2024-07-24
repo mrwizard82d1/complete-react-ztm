@@ -1,0 +1,8 @@
+- Move `SearchBox` into its own component
+- After refactoring
+	- Most properties have same name in 
+		- Caller module
+		- Called module
+	- Can do the same with `onChangehandler` but `onChangeHandler` communicates intent better
+		- Personal preference
+		- 
