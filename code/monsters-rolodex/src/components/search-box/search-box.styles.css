@@ -1,0 +1,12 @@
+/* Should only contain css directives **related to this component** */
+
+/* Style **all** search boxes (with style `search-box`) */
+.search-box {
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 150px;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
