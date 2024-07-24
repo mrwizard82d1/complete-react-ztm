@@ -1,0 +1,23 @@
+- Goals
+	- Apply styles
+	- Better understand how to use styles is JavaScript
+- `App.js` is a singleton
+	- Include `App.css`
+	- This file defines styling for **entire** application
+- React will
+	- Combine **all** referenced `.css` files in all modules into a **single** `.css` file used by application
+	- Consequently, **all** `.css` defined in **all** files used by the single HTML page rendered by browser
+- Consequently,
+	- Each component should define the `css` styling that is pertinent **to that component**
+- Remember
+	- All style files within components are
+		- **Combined into a single .css file**
+		- Delivered to the browser
+	- As a result,
+		- Any style defined "for" a component
+		- Actually may apply to **any** component
+- We `import` `.css` styles in specific React components
+	- To communicate to other developers
+- Will learn how to use styles in JSX in a later module
+	- This technique does not have this same "gotcha"
+	- 
