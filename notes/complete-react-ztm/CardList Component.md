@@ -1,5 +1,5 @@
 - Goal
-	- Refactor the "card list section" of `App`
+	- Refactor the "card list" section of `App`
 	- Into a reusable React component
 - Naming
 	- Our choice `card-list.component.jsx`

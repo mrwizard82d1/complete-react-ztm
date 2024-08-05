@@ -1,0 +1,3 @@
+- Goal: style the rest of our component
+	- Change current `h1` tags into more sophisticated components
+- Can use destructuring to reduce code duplication
