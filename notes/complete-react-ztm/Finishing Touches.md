@@ -1,0 +1,3 @@
+- Create `card.component`
+- Move styling specific to `card.component.jsx` into `card.styles.css`
+- Add title and styling
