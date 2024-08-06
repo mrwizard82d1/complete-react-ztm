@@ -60,6 +60,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <h1 className='app-title'>Do the Monster Mash</h1>
         <SearchBox
           className='monsters-search-box'
           placeholder="search monsters"
