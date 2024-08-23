@@ -1,0 +1,5 @@
+- Review class component rendering and re-rendering
+- Instructor will provide diagram(?)
+	- ![[Pasted image 20240821180043.png]]
+	- Found at https://miro.medium.com/v2/resize:fit:1400/format:webp/1*-d5EKydehfl0qq4mE1kYeQ.png
+	- From [https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)

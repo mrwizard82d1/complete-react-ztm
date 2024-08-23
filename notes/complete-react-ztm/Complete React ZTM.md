@@ -28,7 +28,7 @@
 [[Firebase Rule Security]]
 [[React Interview Questions + Advice]]
 [[Bonus: Progressive Web App]]
-[[Bonus: Testing]]
+[[Bonus - Testing]]
 [[Bonus: Webpack + Babel]]
 [[Bonus: Build a GatsbyJS Blog]]
 [[Appendix 1: Key Developer Concepts]]

@@ -16,6 +16,8 @@ The course refers to two resources:
 [[Monsters Rolodex 2]]
 [[Monsters Rolodex 3]]
 [[Monsters Rolodex 4]]
+[[Function versus Class Components]]
+[[Class Component Lifecycle Method Breakdown]]
 [[Monsters Rolodex 5]]
 
 

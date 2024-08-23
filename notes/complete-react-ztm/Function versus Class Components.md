@@ -1,0 +1,18 @@
+- Utilize hooks to replace class component behaviors
+- Key difference
+	- How React uses these different "things" to re-render
+- What's the same?
+	- Behavior in the application is the same
+	- Way one writes functional components is "largely" the same
+- React library is long-lived
+	- Some developers comfortable with classes
+	- Some developers comfortable with functions
+- Important to know both
+	- Because companies use both
+		- Perhaps both at the same time
+- Because React first used classes
+	- Important to understand class implementation
+	- Even if one is writing functional components
+- Understanding of **both** class and functional components helpful to developers
+- 
+	

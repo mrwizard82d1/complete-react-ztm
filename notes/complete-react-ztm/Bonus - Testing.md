@@ -1,0 +1,3 @@
+- [Jest Cheat Sheet](https://github.com/sapegin/jest-cheat-sheet)
+- Book [Washing Your Code](https://sapegin.me/book/)
+- Consider using the `nock` npm package to hide asynchronous calls
