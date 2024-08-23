@@ -1,0 +1,16 @@
+- A pure function
+	- Returns the exact same thing if given the same arguments
+- Impure functions
+	- Rely on global state (not merely closed over state)
+		- Because the global value may change without the function being aware
+	- Have side-effects
+		- For example, a function that
+			- **Sets** a global value
+			- Returns the result of a calculation
+		- A function creates "some kind of effect" **outside** the scope of the function
+- Although pure functions are "simpler"
+	- Impure functions are **required** for "real work"
+- React
+	- Uses various hooks to change 
+		- Pure functions to 
+		- Impure functions

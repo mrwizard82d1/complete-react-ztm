@@ -1,4 +1,4 @@
-import {Component} from 'react';  // The `Component` class provided by react
+import {setState, useState} from 'react';
 
 import CardList from './components/card-list/card-list.component';
 import SearchBox from "./components/search-box/search-box.component";
@@ -6,13 +6,22 @@ import SearchBox from "./components/search-box/search-box.component";
 import './App.css';
 
 const App = () => {
+  // Note: we are **not yet** using the `searchField` variable / state value
+  const [searchField, setSearchField] = useState('');
+  console.log({ searchField }); // Remember the values of `searchField` over time
+
+  const onSearchChanged = (event) => {
+    const textToMatch = event.target.value.toLocaleLowerCase();
+    setSearchField(textToMatch);
+  };
+
   return (
     <div className="App">
       <h1 className='app-title'>Do the Monster Mash</h1>
-      {/*<SearchBox*/}
-      {/*  className='monsters-search-box'*/}
-      {/*  placeholder="search monsters"*/}
-      {/*  onChangeHandler={onSearchChanged}/>*/}
+      <SearchBox
+        className='monsters-search-box'
+        placeholder="search monsters"
+        onChangeHandler={onSearchChanged}/>
       {/*<CardList monsters={filteredMonsters}/>*/}
     </div>
   )
