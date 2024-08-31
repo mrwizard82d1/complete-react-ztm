@@ -2,3 +2,4 @@
 [[Pure and Impure Functions]]
 [[Hooks - useState]]
 [[Functional Component Re-rendering]]
+[[Infinite Re-rendering]]

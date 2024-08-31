@@ -1,0 +1,24 @@
+A problem
+	- Move the `fetch()` call into our functional component "works"
+	- But introducing a call to `console.log()` **before** the `fetch()` call introduces **infinite re-rendering**
+	- Notice the details
+		- We have now added the value,  `monsters`, to our state (by the call to `useState()`)
+		- However, 
+			- When we call `setMonsters()` in response to the `Promises` introduced by the `fetch()` call being fulfilled, 
+			- We **change** the value of `monsters`
+			- But changing the value of `monsters`
+			- Causes React to **completely run our function** from top-to-bottom
+			- Which, in turn, initiates **another** call to `fetch`
+			- Which changes the state...
+		- And the infinite loop is spawned
+		- A key "wrinkle" of this explanation
+			- A call to `fetch()` generates a **different** object than the previous call 
+			- Although the returned value is equal in its contents
+			- It is actually a **different instance**
+				- That is, a different location in memory
+- How do we stop this **infinite re-rendering**
+	- By using a **side-effect**
+	- We introduce this side-effect by a call to `useEffect`
+- If you have some weird bug resulting in a render loop
+	- Look at variables in your state
+	- Ask, "Are these the same variables or **different** variables?"
