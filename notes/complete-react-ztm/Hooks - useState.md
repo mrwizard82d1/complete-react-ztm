@@ -8,4 +8,5 @@
 			- But is stored **outside** the function
 				- That is, a "global" value whose access controlled by React
 		- A setter function to set the state to a **new** value
-	- Each call to `useState` manages **exactly one** value
+- Each call to `useState` manages **exactly one** value
+- 
