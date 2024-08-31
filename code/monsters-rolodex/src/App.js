@@ -8,7 +8,7 @@ import './App.css';
 const App = () => {
   // Note: we are **not yet** using the `searchField` variable / state value
   const [searchField, setSearchField] = useState('');
-  console.log({ searchField }); // Remember the values of `searchField` over time
+  console.log(searchField); // Remember the values of `searchField` over time
 
   const onSearchChanged = (event) => {
     const textToMatch = event.target.value.toLocaleLowerCase();
