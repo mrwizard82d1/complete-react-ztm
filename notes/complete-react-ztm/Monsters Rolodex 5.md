@@ -1,3 +1,3 @@
-[[Function Components Intro]]
+[[Functional Component Intro]]
 [[Pure and Impure Functions]]
 [[Hooks - useState]]
