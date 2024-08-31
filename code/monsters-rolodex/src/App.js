@@ -6,15 +6,13 @@ import SearchBox from "./components/search-box/search-box.component";
 import './App.css';
 
 const App = () => {
-  console.log('render');
   // Note: we are **not yet** using the `searchField` variable / state value
   const [searchField, setSearchField] = useState('');
   console.log(searchField); // Remember the values of `searchField` over time
 
   const onSearchChanged = (event) => {
     const textToMatch = event.target.value.toLocaleLowerCase();
-    // Sets the stored search field to the **old** value of the search; that is, **no updates**
-    setSearchField(searchField);
+    setSearchField(textToMatch);
   };
 
   return (
