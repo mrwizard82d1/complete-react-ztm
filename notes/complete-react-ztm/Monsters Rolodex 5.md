@@ -4,3 +4,4 @@
 [[Functional Component Re-rendering]]
 [[Infinite Re-rendering]]
 [[Hooks - useEffect]]
+[[Remaining Components]]

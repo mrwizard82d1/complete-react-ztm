@@ -1,0 +1,16 @@
+- Refactor `CardList` component to function
+	- Change implementation to function
+	- Restructure `props` directly into `monsters`
+	- Remove unnecessary `return`
+		- Replaced by simple evaluation of `<div>`
+- Refactor `Card` component to function
+	- A second step in the refactoring could
+		- Destructing the `monster` argument itself directly into its components
+			- `id`
+			- `name`
+			- `email`
+	- Is it as readable as the previous code?
+		- A preference
+- Refactor `SearchBox` component to function
+- 
+- 
