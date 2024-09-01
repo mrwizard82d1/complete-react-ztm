@@ -1,19 +1,24 @@
-import { useState, useEffect } from 'react';
+import {useEffect, useState} from 'react';
 
 import CardList from './components/card-list/card-list.component';
 import SearchBox from "./components/search-box/search-box.component";
 
 import './App.css';
 
+// This implementation has a problem. `App()` is called **every time**
+// one types a character in the string field search box - even though
+// the characters in this field **have no effect** on the rest of the
+// component.
+
 const App = () => {
   // Note: we are **not yet** using the `searchField` variable / state value
   const [searchField, setSearchField] = useState('');
   const [monsters, setMonsters] = useState([]);
+  const [stringField, setStringField] = useState('');
 
   console.log('render');
 
   useEffect(() => {
-    console.log('fetching');
     fetch('https://jsonplaceholder.typicode.com/users')
       .then((response) => response.json())
       .then((users) => setMonsters(users));
@@ -25,9 +30,15 @@ const App = () => {
     setSearchField(textToMatch);
   };
 
-    const filteredMonsters = monsters.filter(monster => {
-      return monster.name.toLocaleLowerCase().includes(searchField.toLowerCase());
-    });
+  const onStringChanged = (event) => {
+    setStringField(event.target.value);
+  };
+
+  const filteredMonsters = monsters.filter(monster => {
+    return monster.name.toLocaleLowerCase().includes(searchField.toLowerCase());
+  });
+
+  console.log(filteredMonsters);
 
   return (
     <div className="App">
@@ -36,6 +47,9 @@ const App = () => {
         className='monsters-search-box'
         placeholder="search monsters"
         onChangeHandler={onSearchChanged}/>
+      <SearchBox
+        placeholder="set string"
+        onChangeHandler={onStringChanged}/>
       <CardList monsters={ filteredMonsters }/>
     </div>
   )
