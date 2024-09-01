@@ -15,9 +15,6 @@ const App = () => {
   const [searchField, setSearchField] = useState('');
   const [monsters, setMonsters] = useState([]);
   const [filteredMonsters, setFilteredMonsters] = useState(monsters);
-  const [stringField, setStringField] = useState('');
-
-  console.log('render');
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -31,16 +28,11 @@ const App = () => {
       return monster.name.toLocaleLowerCase().includes(searchField.toLowerCase());
     });
     setFilteredMonsters(updatedFilteredMonsters);
-    console.log('effect is firing');
   }, [monsters, searchField]);
 
   const onSearchChanged = (event) => {
     const textToMatch = event.target.value.toLocaleLowerCase();
     setSearchField(textToMatch);
-  };
-
-  const onStringChanged = (event) => {
-    setStringField(event.target.value);
   };
 
   return (
@@ -50,9 +42,6 @@ const App = () => {
         className='monsters-search-box'
         placeholder="search monsters"
         onChangeHandler={onSearchChanged}/>
-      <SearchBox
-        placeholder="set string"
-        onChangeHandler={onStringChanged}/>
       <CardList monsters={ filteredMonsters }/>
     </div>
   )
