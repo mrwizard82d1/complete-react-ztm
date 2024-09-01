@@ -14,6 +14,7 @@ const App = () => {
   // Note: we are **not yet** using the `searchField` variable / state value
   const [searchField, setSearchField] = useState('');
   const [monsters, setMonsters] = useState([]);
+  const [filteredMonsters, setFilteredMonsters] = useState(monsters);
   const [stringField, setStringField] = useState('');
 
   console.log('render');
@@ -25,6 +26,14 @@ const App = () => {
     // Because we pass an empty array to `useEffect`, the callback will be invoked **exactly once**
   }, []);
 
+  useEffect(() => {
+    const updatedFilteredMonsters = monsters.filter(monster => {
+      return monster.name.toLocaleLowerCase().includes(searchField.toLowerCase());
+    });
+    setFilteredMonsters(updatedFilteredMonsters);
+    console.log('effect is firing');
+  }, [monsters, searchField]);
+
   const onSearchChanged = (event) => {
     const textToMatch = event.target.value.toLocaleLowerCase();
     setSearchField(textToMatch);
@@ -33,12 +42,6 @@ const App = () => {
   const onStringChanged = (event) => {
     setStringField(event.target.value);
   };
-
-  const filteredMonsters = monsters.filter(monster => {
-    return monster.name.toLocaleLowerCase().includes(searchField.toLowerCase());
-  });
-
-  console.log(filteredMonsters);
 
   return (
     <div className="App">
