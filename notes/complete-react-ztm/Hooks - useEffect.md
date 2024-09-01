@@ -1,0 +1,22 @@
+- We trigger side-effects by calling `useEffect()`
+	- Two arguments
+		- A callback function
+		- An array of "values"
+			- Typically
+				- Prop values
+				- State values
+- The `useEffect()` callback runs under two conditions
+	- When it is first encountered
+	- When data in the passed array changes
+		- If no data passed, function **only invoked once**
+- Introduce `stringField` state variable
+	- Introduces a problem
+		- `App()` called when every character typed in string field
+		- Most importantly, the value, `filteredMonsters`, is re-initialized on **every** render (every call to `App`)
+	- We only want the local variable, `filteredMonsters`, to update
+		- If the `monsters` array changes
+		- Or if the value of `searchField` changes
+- Repair this issue by introducing **another effect**
+	- Change `filteredMonsters` into an item in the **state**
+		- Move result of `monsters.filter()` into this new effect
+		- Call `setFilteredMonsters()` when filtered list of monsters is updated

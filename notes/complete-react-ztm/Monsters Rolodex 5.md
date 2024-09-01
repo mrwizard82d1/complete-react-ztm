@@ -3,3 +3,4 @@
 [[Hooks - useState]]
 [[Functional Component Re-rendering]]
 [[Infinite Re-rendering]]
+[[Hooks - useEffect]]
