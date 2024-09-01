@@ -10,9 +10,15 @@ const App = () => {
   const [searchField, setSearchField] = useState('');
   const [monsters, setMonsters] = useState([]);
 
-  fetch('https://jsonplaceholder.typicode.com/users')
-    .then((response) => response.json())
-    .then((users) => setMonsters(users));
+  console.log('render');
+
+  useEffect(() => {
+    console.log('fetching');
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then((response) => response.json())
+      .then((users) => setMonsters(users));
+    // Because we pass an empty array to `useEffect`, the callback will be invoked **exactly once**
+  }, []);
 
   const onSearchChanged = (event) => {
     const textToMatch = event.target.value.toLocaleLowerCase();
