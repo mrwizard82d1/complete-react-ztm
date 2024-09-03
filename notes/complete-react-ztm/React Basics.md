@@ -19,6 +19,14 @@ The course refers to two resources:
 [[Function versus Class Components]]
 [[Class Component Lifecycle Method Breakdown]]
 [[Monsters Rolodex 5]]
+[[React v18]]
+[[DOM & Virtual DOM]]
+[[React & ReactDOM]]
+[[React & ReactDOM Part 2]]
+[[ReactDOM v18 Changes]]
+[[DOM Paint Flashing]]
+
+
 
 
 
